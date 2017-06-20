@@ -10,18 +10,18 @@ User.destroy_all
 Artwork.destroy_all
 ArtworkShare.destroy_all
 
-doggo = User.new(username: 'doggo')
-catto = User.new(username: 'catto')
-ratto = User.new(username: 'ratto')
-pikachu = User.new(username: 'pikachu')
-frank = User.new(username: 'Frank')
+doggo = User.create(username: 'doggo')
+catto = User.create(username: 'catto')
+ratto = User.create(username: 'ratto')
+pikachu = User.create(username: 'pikachu')
+frank = User.create(username: 'Frank')
 
-art1 =  Artwork.new(title: 'Biscuits', image_url: 'woof.com', artist_id: doggo.id)
-art2 =  Artwork.new(title: 'Fish', image_url: 'meow.com', artist_id: catto.id)
-art3 =  Artwork.new(title: 'Fromage', image_url: 'squeak.com', artist_id: ratto.id)
-art4 =  Artwork.new(title: 'Self Portrait', image_url: 'pokemon.com', artist_id: pikachu.id)
-art5 =  Artwork.new(title: 'End of the worlds', image_url: 'rapture.com', artist_id: frank.id)
+art1 =  Artwork.create(title: 'Biscuits', image_url: 'woof.com', artist_id: doggo.id)
+art2 =  Artwork.create(title: 'Fish', image_url: 'meow.com', artist_id: catto.id)
+art3 =  Artwork.create(title: 'Fromage', image_url: 'squeak.com', artist_id: ratto.id)
+art4 =  Artwork.create(title: 'Self Portrait', image_url: 'pokemon.com', artist_id: pikachu.id)
+art5 =  Artwork.create(title: 'End of the worlds', image_url: 'rapture.com', artist_id: frank.id)
 
-share1 = ArtworkShare.new(artwork_id: art5.id, viewer_id: pikachu.id)
-share2 = ArtworkShare.new(artwork_id: art2.id, viewer_id: ratto.id)
-share3 = ArtworkShare.new(artwork_id: art1.id, viewer_id: frank.id)
+share1 = ArtworkShare.create(artwork_id: art5.id, viewer_id: pikachu.id)
+share2 = ArtworkShare.create(artwork_id: art2.id, viewer_id: ratto.id)
+share3 = ArtworkShare.create(artwork_id: art1.id, viewer_id: frank.id)

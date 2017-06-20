@@ -24,8 +24,8 @@ ActiveRecord::Schema.define(version: 20170619233115) do
   end
 
   add_index "artwork_shares", ["artwork_id", "viewer_id"], name: "index_artwork_shares_on_artwork_id_and_viewer_id", unique: true, using: :btree
-  add_index "artwork_shares", ["artwork_id"], name: "index_artwork_shares_on_artwork_id", unique: true, using: :btree
-  add_index "artwork_shares", ["viewer_id"], name: "index_artwork_shares_on_viewer_id", unique: true, using: :btree
+  add_index "artwork_shares", ["artwork_id"], name: "index_artwork_shares_on_artwork_id", using: :btree
+  add_index "artwork_shares", ["viewer_id"], name: "index_artwork_shares_on_viewer_id", using: :btree
 
   create_table "artworks", force: :cascade do |t|
     t.string   "title",      null: false
